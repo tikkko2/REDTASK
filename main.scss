@@ -1,0 +1,66 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@media screen and (min-width: 993px) {
+    .btns-container {
+      .btn {
+        width: 25%;
+      }
+    }
+  }
+
+@media screen and (max-width: 992px) {
+  .img-container {
+    
+    img {
+      width: 100%;
+    }
+  }
+  .btns-container {
+    .btn {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .img-container {
+    padding: 4.5rem 0 4.5rem 0;
+    img{
+        width: 100%;
+    }
+  }
+  .btns-container {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  .main-container {
+    height: 100vh;
+    .container {
+      transform: translate(0%, 10%);
+      .btns-container {
+        .btn {
+            background-color: #62A1EB;
+            border-radius: 8px;
+            color: white;
+            height: 3rem;
+            padding: .5rem;
+        }
+      }
+    }
+  }
+}
