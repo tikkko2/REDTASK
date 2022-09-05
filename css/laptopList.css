@@ -4,3 +4,8 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+.row{
+  background-color: #AED1EA;
+  border-radius: 20px;
+}

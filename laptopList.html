@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ჩანაწერების სია</title>
-    <link rel="shortcut icon" href="./photos/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./photos/favicon.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,14 +15,19 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="info.css" />
     <link rel="stylesheet" href="laptopList.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="back-btn position-relative">
-        <div class="arrow position-absolute">&#10094;</div>
+      <div class="arrow position-absolute">&#10094;</div>
+    </div>
+    <h2 class="list-bold text-center mb-5">ჩანაწერების სია</h2>
+
+    <div class="list-container">
+      <div class="laptop-list" id="laptops">
+        <div class="container d-flex justify-content-around mb-4">
+        </div>
+        
       </div>
-    <h2 class="list-bold text-center">ჩანაწერების სია</h2>
-    <div class="container">
-      <div class="row d-flex justify-content-around" id="laptops"></div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -30,7 +35,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="main.js"></script>
-    <script src="list.js"></script>
-</body>
+    <script src="./js/main.js"></script>
+    <script src="./js/list.js"></script>
+  </body>
 </html>

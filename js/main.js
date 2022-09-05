@@ -4,6 +4,11 @@ $(document).ready(function () {
     return false;
   });
 
+  $(".btn-list").click(function () {
+    window.location.href = "./laptopList.html";
+    return false;
+  });
+
   $(".back-btn").click(function () {
     window.location.href = "./index.html";
     return false;

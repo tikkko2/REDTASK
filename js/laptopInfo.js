@@ -80,3 +80,18 @@ function validateLaptopName(e){
     $(".laptop-b-label").addClass("invalid");
   }
 }
+
+// foreach unda gavyve
+let laptops = `
+          <div class="row py-3 col-md-4">
+            <div class="col-md-6">
+              <img src="./photos/laptop.png" alt="" srcset="" width="100%" />
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+              <h5>${api}</h5> //apidan unda wamovigo info
+              <p>${api}</p> //apidan unda wamovigo info
+              <a href="">მეტის ნახვა</a>
+            </div>
+          </div>
+`;
+document.getElementById("laptops").innerHTML += laptops;
