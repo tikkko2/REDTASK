@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ჩანაწერის დამატება</title>
+    <link rel="shortcut icon" href="./photos/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="info.css" />
+  </head>
+  <body>
+    <div class="back-btn position-relative">
+      <div class="arrow position-absolute">&#10094;</div>
+    </div>
+<div class="container">
+  <div class="info-laptop d-flex justify-content-center flex-wrap w-100">
+          <div class="employee underline text-end px-5">
+            <a href="./info.html">თანამშრომლის ინფო</a>
+          </div>
+
+          <div class="laptop-details text-start">
+            <a href="./laptopInfo.html">ლეპტოპის მახასიათებლები</a>
+            </div>
+        </div>
+        <div class="page-num text-muted text-center"><span>1/2</span></div>
+</div>
+    
+    <div class="main-info-container mt-4">
+      <div class="container">
+        <div class="write-info bg-white">
+          <div class="container">
+            <div class="info-form m-auto">
+              <div class="row justify-content-around">
+                <div class="col-md-6">
+                  <label for="name" class="pb-1 name-label">სახელი</label>
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control name blue-border"
+                    placeholder="გრიშა"
+                    minlength="2"
+                    title="სავალდებულო"
+                    onblur="validateName(event)" onkeyup='saveValue(this);'
+                    required
+                  />
+                  <label for="name" class="error-name name-b-label text-muted mt-1"
+                    >მინიმუმ 2 სიმბოლო, ქართული ასოები</label
+                  >
+                </div>
+                <div class="col-md-6 right-col">
+                  <label for="surname" class="pb-1 surname-label">გვარი</label>
+                  <input
+                    type="text"
+                    id="surname"
+                    class="form-control surname blue-border"
+                    onblur="validateSurname(event)"
+                    placeholder="ბაგრატიონი" title="სავალდებულო"
+                    minlength="2" onkeyup='saveValue(this);'
+                    required
+                  />
+                  <label for="surname" class="error-sur surname-b-label text-muted mt-1"
+                    >მინიმუმ 2 სიმბოლო, ქართული ასოები</label
+                  >
+                </div>
+              </div>
+
+              <select class="form-select dropdown mt-5 w-100" id="teams" aria-label="Default select example">
+                <!-- <option selected>თიმი</option>
+                <span class="position-absolute">&#10095;</span> -->
+              </select>
+
+              <div class="dropdown mt-5 mb-5 w-100">
+                <button
+                  class="btn text-start w-100"
+                  type="button"
+                  id="dropdownMenuButton2"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false" title="სავალდებულო"
+                >
+                  პოზიცია
+                  <span class="position-absolute">&#10095;</span>
+                </button>
+                <div class="dropdown-menu  w-100" id="position-drop" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#"></a>
+                </div>
+              </div>
+
+              <div class="row justify-content-around mb-5">
+                <div class="col-md-12 mb-5">
+                  <label for="email" class="email-label pb-1">მეილი</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control email left-inp blue-border " onkeyup='saveValue(this);'
+                    placeholder="grish666@redberry.ge" title="სავალდებულო" onblur="validateEmail(event)"
+                    required
+                  />
+                  <label for="email" class="error-email email-b-label text-muted mt-1"
+                    >უნდა მთავრდებოდეს @redberry.ge-ით</label
+                  >
+                </div>
+                <div class="col-md-12 right-col">
+                  <label for="phone" class="pb-1 phone-label"
+                    >ტელეფონის ნომერი</label
+                  >
+                  <input
+                    type="text"
+                    id="phone"
+                    class="form-control phone blue-border"
+                    onblur="validateNumber(event)" onkeyup='saveValue(this);'
+                    title="სავალდებულო"
+                    placeholder="+995 598 000 701"
+                    required
+                  />
+                  <label for="phone" class="phone-text phone-b-label text-muted mt-1"
+                    >უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</label
+                  >
+                </div>
+              </div>
+
+              <div class="next-container d-flex justify-content-end">
+                <button type="submit" class="btn next-btn all-btn px-5">
+                  შემდეგი
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="circle-logo mt-5 pb-4">
+      <div class="container d-flex justify-content-center">
+        <img src="./photos/circle-logo.png" alt="REDBERRY LOGO" />
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="info.js"></script>
+  </body>
+</html>

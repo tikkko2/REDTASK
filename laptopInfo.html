@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ჩანაწერის დამატება</title>
+    <link rel="shortcut icon" href="./photos/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="info.css" />
+    <link rel="stylesheet" href="laptopInfo.css" />
+  </head>
+  <body>
+    <div class="main-laptop-container mt-4">
+      <div class="container">
+        <div class="write-info bg-white">
+          <div class="info-form m-auto">
+            <div class="container">
+              <div class="upload-photo">
+                <div class="container mb-5 mt-5">
+                  <picture class="d-flex justify-content-center">
+                    <source
+                      media="(max-width: 390px)"
+                      srcset="./photos/camera.png"
+                    />
+                  </picture>
+                  <!-- <img src="./photos/warning.png" alt="REQUIRED!" /> -->
+                  <span class="header mb-5 mt-4"
+                    >ჩააგდე ან ატვირთე ლეპტოპის ფოტო</span
+                  >
+                  <div><button class="btn upload-btn all-btn px-5">ატვირთე</button></div>
+                </div>
+              </div>
+
+              <div class="laptop-brand mb-5 mt-5">
+                <div class="row justify-content-around">
+                  <div class="col-md-6">
+                    <label for="laptop" class="pb-1 laptop-label"
+                      >ლეპტოპის სახელი</label
+                    >
+                    <input
+                      type="text"
+                      id="laptop"
+                      class="form-control laptop blue-border"
+                      placeholder="HP"
+                      minlength="2"
+                      title="სავალდებულო"
+                      onblur="validateLaptopName(event)"
+                      required
+                    />
+                    <label for="laptop" class="laptop-b-label text-muted mt-1"
+                      >ლათინური ასოები, ციფრები, !@#$%^&*()_+=</label
+                    >
+                  </div>
+                  <div class="col-md-6 d-flex align-items-center mt-1">
+                    <div id="dropdown" class="dropdown w-100">
+                      <button
+                        class="btn text-start w-100"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="სავალდებულო"
+                      >
+                        ლეპტოპის ბრენდი
+                        <span class="position-absolute">&#10095;</span>
+                      </button>
+                      <div
+                        class="dropdown-menu w-100"
+                        id=" brand-drop"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="cpu-container mt-5">
+                <div class="row">
+                  <div class="col-md-4 d-flex align-items-center pb-2">
+                    <div id="dropdown" class="dropdown w-100">
+                      <button
+                        class="btn text-start w-100"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="სავალდებულო"
+                      >
+                        CPU
+                        <span class="position-absolute">&#10095;</span>
+                      </button>
+                      <div
+                        class="dropdown-menu w-100"
+                        id="cpu-drop"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="cpu1" class="pb-1 cpu1-label"
+                      >CPU-ს ბირთვი</label
+                    >
+                    <input
+                      type="text"
+                      id="cpu1"
+                      class="form-control cpu1 blue-border"
+                      placeholder="14"
+                      minlength="2"
+                      title="სავალდებულო"
+                      onblur="onlyNumbersCPU1(event)"
+                      required
+                    />
+                    <label for="cpu1" class="cpu1-b-label text-muted mt-1"
+                      >მხოლოდ ციფრები</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <label for="cpu2" class="pb-1 cpu2-label"
+                      >CPU-ს ნაკადი</label
+                    >
+                    <input
+                      type="text"
+                      id="cpu2"
+                      class="form-control cpu2 blue-border"
+                      placeholder="365"
+                      minlength="2"
+                      title="სავალდებულო"
+                      onblur="onlyNumbersCPU2(event)"
+                      required
+                    />
+                    <label for="cpu2" class="cpu2-b-label text-muted mt-1"
+                      >მხოლოდ ციფრები</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ram-memory-container mb-5 mt-5">
+                <div class="row justify-content-around">
+                  <div class="col-md-6">
+                    <label for="ram" class="pb-1 ram-label"
+                      >ლეპტოპის RAM (GB)</label
+                    >
+                    <input
+                      type="text"
+                      id="ram"
+                      class="form-control ram blue-border"
+                      placeholder="16"
+                      minlength="2"
+                      title="სავალდებულო"
+                      onblur="onlyNumbersRAM(event)"
+                      required
+                    />
+                    <label for="ram" class="ram-b-label text-muted mt-1"
+                      >მხოლოდ ციფრები</label
+                    >
+                  </div>
+                  <div class="col-md-6 mt-1">
+                    <label for="memory" class="memory-label mb-3">მეხსიერების ტიპი</label>
+                    <div class="memory-input ">
+                      <input type="checkbox" name="ssd-check" id="ssd-check" class="checkbox-round"/>
+                      <label for="ssd-check" class="px-2">SSD</label>
+                      <input type="checkbox" name="hdd-check" id="hdd-check" class="checkbox-round mx-3"/>
+                      <label for="hdd-check" class="">HDD</label >
+                    </div>
+                </div>
+              </div>
+              <hr />
+              <div class="data-price-container mt-5 mb-5">
+                <div class="row justify-content-around">
+                  <div class="col-md-6">
+                    <label for="purchase" class="pb-1 purchase-label"
+                      >შეძენის რიცხვი (არჩევითი)</label
+                    >
+                    <input
+                      type="text"
+                      id="purchase"
+                      class="form-control purchase blue-border"
+                      placeholder="დდ / თთ / წწწწ"
+                    />
+                  </div>
+                  <div class="col-md-6 right-col">
+                    <label for="price" class="pb-1 price-label"
+                      >ლეპტოპის ფასი</label
+                    >
+                    <input
+                      type="text"
+                      id="price"
+                      class="form-control price blue-border"
+                      onblur="onlyNumbersPrice(event)"
+                      placeholder="0000"
+                      title="სავალდებულო"
+                      required
+                    />
+                    <label for="price" class="price-b-label text-muted mt-1"
+                      >მხოლოდ ციფრები</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="laptop-condition mt-5 mb-5">
+                <label for="" class="condition-label pb-3">ლეპტოპის მდგომარეობა</label>
+                <div>
+                  <input type="checkbox" name="new" id="new" class="checkbox-round"/>
+                  <label for="new" class="px-2">ახალი</label>
+                  <input type="checkbox" name="used" id="used" class="checkbox-round mx-3"/>
+                  <label for="used">მეორადი</label>
+                </div>
+              </div>
+
+              <div class="back-container d-flex justify-content-between">
+                <div class="btn mt-2">
+                  <a href="./info.html">უკან</a>
+                </div>
+                <div>
+                  <button type="submit" class="btn next-btn all-btn px-5">
+                    დამახსოვრება
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="laptopInfo.js"></script>
+  </body>
+</html>

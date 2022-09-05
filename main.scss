@@ -5,17 +5,35 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(./font/HelveticaNeue.ttc);
+}
+
 @media screen and (min-width: 993px) {
-    .btns-container {
-      .btn {
-        width: 25%;
+  .main-info-container,
+  .main-laptop-container {
+    margin-top: 3rem;
+    .write-info {
+      padding: 5rem 0 5rem 0;
+      margin-top: 2rem;
+      .container {
+        width: 70%;
       }
     }
   }
+  .btns-container {
+    .btn {
+      width: 25%;
+    }
+  }
+  .page-num {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .img-container {
-    
     img {
       width: 100%;
     }
@@ -29,38 +47,120 @@
 
 @media screen and (max-width: 390px) {
   .img-container {
-    padding: 4.5rem 0 4.5rem 0;
-    img{
-        width: 100%;
+    padding: 4rem 0 4.5rem 0;
+    img {
+      width: 100%;
     }
   }
   .btns-container {
     .btn {
-      width: 100%;
+      width: 95%;
     }
+  }
+  .main-info-container,
+  .main-laptop-container {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    .container {
+      padding: 0;
+      .write-info {
+        padding: 2rem 1rem 0 1rem;
+        margin-top: 0.5rem;
+        .col-md-6 {
+          margin: 1rem 0 1rem 0;
+        }
+        .next-btn {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
+  .circle-logo,
+  .laptop-details,
+  .upload-btn {
+    display: none;
   }
 }
 
 html {
   height: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.all-btn {
+  background-color: #62a1eb;
+  border-radius: 8px;
+  color: white;
+  &:hover {
+    background-color: #317ad0;
+    transition-duration: 300ms;
+    color: white;
+  }
+}
+
+.uppercase {
+  font-family: HelveticaNeue;
+  font-variant-caps: all-small-caps;
+  font-size: 24px;
+}
+
 body {
+  font-family: HelveticaNeue;
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  .main-container {
-    height: 100vh;
-    .container {
-      transform: translate(0%, 10%);
-      .btns-container {
-        .btn {
-            background-color: #62A1EB;
-            border-radius: 8px;
-            color: white;
-            height: 3rem;
-            padding: .5rem;
-        }
-      }
-    }
+}
+
+input,
+.dropdown, .memory-input {
+  height: 3.2rem;
+}
+
+button {
+  height: 3rem;
+}
+
+.main-container {
+  height: 100vh;
+  .container {
+    transform: translate(0%, 10%);
   }
+}
+
+.name-b-label,
+.surname-b-label,
+.email-b-label,
+.phone-b-label,
+.laptop-b-label,
+.cpu1-b-label,
+.cpu2-b-label,
+.ram-b-label,
+.memory-b-label,
+.price-b-label,
+.purchase-b-label,
+.condition-b-label {
+  font-size: 0.9rem;
+}
+
+.name-label,
+.surname-label,
+.employee,
+.laptop-details,
+.list-bold,
+.email-label,
+.phone-label,
+.laptop-label,
+.cpu1-label,
+.cpu2-label,
+.ram-label,
+.memory-label,
+.price-label,
+.purchase-label,
+.condition-label {
+  font-weight: 600;
 }

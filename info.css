@@ -1,0 +1,87 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+.back-btn {
+  top: 10%;
+  left: 3%;
+  transform: translate(-20%, 70%);
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  width: 53px;
+  height: 53px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #b2b2b2;
+  color: white;
+  transition-duration: 500ms;
+}
+
+.back-btn .arrow {
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -60%);
+}
+
+.employee,
+.laptop {
+  cursor: pointer;
+}
+
+.underline {
+  background-image: linear-gradient(#000000 0 0);
+  background-position: bottom center;
+  background-size: 60% 0.1rem;
+  background-repeat: no-repeat;
+  padding-bottom: 0.8rem;
+}
+
+
+
+.blue-border{
+   border: #8ac0e2 solid 1.8px;
+}
+
+.write-info {
+  border-radius: 1.2rem;
+}
+
+.write-info .left-col {
+  margin-right: 2rem;
+}
+
+.dropdown {
+  background-color: #ebebeb;
+  border-radius: 0.5rem;
+  height: 3rem;
+}
+
+.dropdown .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  font-weight: 600;
+}
+
+.dropdown span {
+  right: 1rem;
+  transform: rotate(90deg);
+}
+
+.invalid {
+  color: #E52F2F !important;
+}
+
+.invalid-border{
+  border: 2px solid #E52F2F !important;
+}
